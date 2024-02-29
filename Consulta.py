@@ -5,7 +5,7 @@ def ejecutar_consulta():
     proyecto = "prueba-415603"  # Reemplaza con tu ID de proyecto
     client = bigquery.Client(project=proyecto)
 
-    # Especifica tu consulta SQL
+    # Especifica tu nueva consulta SQL con el promedio de la cantidad total
     consulta = """
         WITH TopFamiliesAndSpecies AS (
           SELECT family, species, COUNT(*) AS cantidad_total
@@ -29,3 +29,4 @@ def ejecutar_consulta():
 
 if __name__ == "__main__":
     ejecutar_consulta()
+
